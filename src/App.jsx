@@ -25,9 +25,12 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Header />} />
-        <Route path="/hero" element={<Hero />} />
+          <Route path="/hero"> 
+              <Route path=":id" element={<Hero />} />
+          </Route>
+        {/* <Route path="/hero" element={<Hero />} />
         <Route path="/hero/:id" element={<Section />} />
-        <Route path="/hero/new" element={<Footer />} />
+        <Route path="/hero/new" element={<Footer />} /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
 
