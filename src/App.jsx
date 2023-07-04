@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
-// import Section from './components/Section'
 import { Link,Route, Routes } from 'react-router-dom'
+import Section from './components/Section'
+import Footer from './components/Footer'
+import NotFound from './components/NotFound'
+
 
 
 function App() {
@@ -23,6 +26,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Header />} />
         <Route path="/hero" element={<Hero />} />
+        <Route path="/hero/:id" element={<Section />} />
+        <Route path="/hero/new" element={<Footer />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
     </>

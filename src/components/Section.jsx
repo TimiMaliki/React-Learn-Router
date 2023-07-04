@@ -1,8 +1,12 @@
+
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 const Section = () => {
+    const {id} = useParams()
   return (
-    <div>Section</div>
+   
+    <div>Section {id}</div>
   )
 }
 
